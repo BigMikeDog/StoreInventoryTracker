@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/textView_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Chips" />
+
+    <TextView
+        android:id="@+id/textView_item_quantity_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_item_name"
+        tools:text="In Stock: " />
+
+    <TextView
+        android:id="@+id/textView_item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_item_quantity_text"
+        app:layout_constraintStart_toEndOf="@+id/textView_item_quantity_text"
+        app:layout_constraintTop_toTopOf="@+id/textView_item_quantity_text"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/textView_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_item_quantity_text"
+        app:layout_constraintEnd_toStartOf="@+id/button_sell_item"
+        app:layout_constraintTop_toTopOf="@+id/textView_item_name"
+        tools:text="$50.00" />
+
+    <Button
+        android:id="@+id/button_sell_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/sell_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="false"/>
+
+</android.support.constraint.ConstraintLayout>

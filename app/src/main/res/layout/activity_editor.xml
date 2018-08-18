@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity">
+
+    <TextView
+        android:id="@+id/textView_product_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/product_overview_text"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        android:ems="10"
+        android:hint="@string/product_name_hint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_product_overview"
+        app:layout_constraintTop_toTopOf="@+id/textView_product_overview" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:gravity="end"
+        android:text="@string/price_text"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_product_price"
+        app:layout_constraintEnd_toStartOf="@+id/editText_product_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_product_price" />
+
+    <EditText
+        android:id="@+id/editText_product_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:ems="10"
+        android:hint="@string/price_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editText_product_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_product_name" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:gravity="end"
+        android:text="@string/quantity_text"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_product_quantity"
+        app:layout_constraintEnd_toStartOf="@+id/editText_product_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_product_quantity" />
+
+    <EditText
+        android:id="@+id/editText_product_quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:ems="10"
+        android:hint="@string/quantity_0_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_add_product_quantity"
+        app:layout_constraintStart_toStartOf="@+id/editText_product_price"
+        app:layout_constraintTop_toBottomOf="@+id/editText_product_price" />
+
+    <ImageButton
+        android:id="@+id/imageButton_add_product_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_product_quantity"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_remove_product_quantity"
+        app:layout_constraintTop_toTopOf="@+id/editText_product_quantity"
+        app:srcCompat="@drawable/ic_action_add_quantity"
+        android:contentDescription="@string/add_one_to_quantity_description" />
+
+    <ImageButton
+        android:id="@+id/imageButton_remove_product_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_add_product_quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_add_product_quantity"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_action_remove_quantity"
+        android:contentDescription="@string/subtract_one_from_quantity_description" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_product_quantity"
+        tools:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/textView_supplier_overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:gravity="end"
+        android:text="@string/supplier_overview_text"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editText_supplier_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+
+    <EditText
+        android:id="@+id/editText_supplier_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:ems="10"
+        android:hint="@string/supplier_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editText_product_quantity"
+        app:layout_constraintTop_toTopOf="@+id/textView_supplier_overview" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:gravity="end"
+        android:text="@string/phone_number_text"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_supplier_phone"
+        app:layout_constraintEnd_toStartOf="@+id/editText_supplier_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_supplier_phone" />
+
+    <EditText
+        android:id="@+id/editText_supplier_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:ems="10"
+        android:hint="@string/phone_number_hint"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editText_supplier_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_supplier_name" />
+
+</android.support.constraint.ConstraintLayout>
